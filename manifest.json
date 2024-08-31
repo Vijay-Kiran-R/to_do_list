@@ -1,16 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "To-Do List Extension",
-    "version": "1.0",
-    "description": "A simple To-Do List to keep track of your tasks.",
+    "name": "Advanced To-Do List",
+    "version": "2.0",
+    "description": "A feature-rich To-Do List with task prioritization, due dates, and more.",
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
         "16": "icon_1.png",
         "48": "icon_2.png",
         "128": "icon_3.png"
-      }
-    },
-    "permissions": ["storage"]
-  }
-   
+    }
+},
+"permissions": ["storage", "notifications", "alarms"],
+"background": {
+  "service_worker": "background.js"
+}
+}

@@ -1,60 +1,137 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #282c34;
-    color: #61dafb;
+    background-color: #4a4a4a;
+    color: #4a4a4a;
     padding: 20px;
-    width: 320px;
+    width: 350px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  #todo-app {
-    background-color: #20232a;
-    padding: 15px;
-    border-radius: 10px;
-  }
-  
-  #new-task {
-    width: 80%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
   }
   
+  #search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  #search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #e0e0e0;
+    color: #4a4a4a;
+    transition: width 0.3s ease, opacity 0.3s ease;
+  }
+  
+  #search-bar.hidden {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    margin-left: 0;
+  }
+  
+  #task-entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #new-task, #due-date, #priority {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
   #add-task {
-    padding: 10px 15px;
-    background-color: #61dafb;
-    color: #282c34;
+    padding: 8px 15px;
+    background-color: #8ac7db;
+    color: #4a4a4a;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #filters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  .filter-btn {
+    background-color: #e0e0e0;
+    color: #4a4a4a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-btn.active {
+    background-color: #8ac7db;
+    color: #4a4a4a;
   }
   
   #task-list {
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
   }
   
   li {
-    background: #333;
+    background: #ffffff;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.3s ease;
   }
   
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .edit {
-    margin-right: 10px;
+  .task-info {
+    flex-grow: 1;
+    text-align: left;
     cursor: pointer;
-    color: #61dafb;
-    background: none;
-    border: none;
+  }
+  
+  .due-date {
+    font-size: 12px;
+    color: #6c6c6c;
+    margin-top: 5px;
+  }
+  
+  .priority-high::before {
+    content: "🔥 ";
+    color: #ff4c4c;
+  }
+  
+  .priority-medium::before {
+    content: "⚠️ ";
+    color: #ffa500;
+  }
+  
+  .priority-low::before {
+    content: "🔵 ";
+    color: #4ca4ff;
   }
   
   .delete {
@@ -68,18 +145,54 @@ body {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   
-  #clear-tasks {
+  #clear-completed {
     background-color: #ff4c4c;
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
   }
   
-  #progress {
-    color: #61dafb;
+  #progress-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  #progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    position: relative;
+  }
+  
+  #progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #progress-text {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4a4a4a;
   }
   

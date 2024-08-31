@@ -4,18 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="popup.css">
-  <title>To-Do List</title>
+  <title>Calm To-Do List</title>
 </head>
 <body>
   <div id="todo-app">
-    <h2>My To-Do List</h2>
-    <input type="text" id="new-task" placeholder="Add a new task">
-    <button id="add-task">Add</button>
-    <ul id="task-list"></ul>
-    <div id="footer">
-      <button id="clear-tasks">Clear Completed</button>
-      <span id="progress"></span>
+    <header>
+      <h2>My To-Do List</h2>
+      <div id="search-container">
+        <button id="search-icon">🔍</button>
+        <input type="text" id="search-bar" placeholder="Search tasks..." class="hidden">
+      </div>
+    </header>
+    <div id="task-entry">
+      <input type="text" id="new-task" placeholder="Add a new task" required>
+      <input type="date" id="due-date">
+      <select id="priority">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button id="add-task">Add Task</button>
     </div>
+    <div id="filters">
+      <button id="filter-all" class="filter-btn active">All</button>
+      <button id="filter-active" class="filter-btn">Active</button>
+      <button id="filter-completed" class="filter-btn">Completed</button>
+    </div>
+    <ul id="task-list"></ul>
+    <footer>
+      <button id="clear-completed">Clear Completed</button>
+      <div id="progress-container">
+        <canvas id="progress-circle" width="50" height="50"></canvas>
+        <span id="progress-text">0%</span>
+      </div>
+    </footer>
   </div>
   <script src="popup.js"></script>
 </body>
