@@ -111,12 +111,18 @@ li {
     flex-grow: 1;
     text-align: left;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevent the text from wrapping */
+    max-width: calc(100% - 80px); /* Adjust width to leave space for the date and delete button */
+    position: relative; /* Required for the tooltip */
 }
 
 .due-date {
     font-size: 12px;
     color: #6c6c6c;
-    margin-top: 5px;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .priority-high::before {
@@ -182,4 +188,17 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #4a4a4a;
+}
+#task-list li {
+    color: rgb(0, 0, 0); /* Red text */
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    word-wrap: break-word;
 }
