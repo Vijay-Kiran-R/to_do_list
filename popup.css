@@ -1,33 +1,33 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #4a4a4a;
-    color: #4a4a4a;
+    color: #fff;
     padding: 20px;
     width: 350px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  header {
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  #search-container {
+}
+
+#search-container {
     display: flex;
     align-items: center;
-  }
-  
-  #search-icon {
+}
+
+#search-icon {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 18px;
-  }
-  
-  #search-bar {
+}
+
+#search-bar {
     width: 100%;
     padding: 10px;
     margin-left: 10px;
@@ -37,29 +37,29 @@ body {
     background-color: #e0e0e0;
     color: #4a4a4a;
     transition: width 0.3s ease, opacity 0.3s ease;
-  }
-  
-  #search-bar.hidden {
+}
+
+#search-bar.hidden {
     width: 0;
     padding: 0;
     opacity: 0;
     margin-left: 0;
-  }
-  
-  #task-entry {
+}
+
+#task-entry {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  #new-task, #due-date, #priority {
+}
+
+#new-task, #due-date, #priority {
     padding: 8px;
     margin: 5px;
     border: none;
     border-radius: 5px;
-  }
-  
-  #add-task {
+}
+
+#add-task {
     padding: 8px 15px;
     background-color: #8ac7db;
     color: #4a4a4a;
@@ -67,15 +67,15 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #filters {
+}
+
+#filters {
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
-  }
-  
-  .filter-btn {
+}
+
+.filter-btn {
     background-color: #e0e0e0;
     color: #4a4a4a;
     padding: 8px 15px;
@@ -83,20 +83,20 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .filter-btn.active {
+}
+
+.filter-btn.active {
     background-color: #8ac7db;
     color: #4a4a4a;
-  }
-  
-  #task-list {
+}
+
+#task-list {
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
-  }
-  
-  li {
+}
+
+li {
     background: #ffffff;
     margin: 5px 0;
     padding: 10px;
@@ -105,50 +105,50 @@ body {
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.3s ease;
-  }
-  
-  .task-info {
+}
+
+.task-info {
     flex-grow: 1;
     text-align: left;
     cursor: pointer;
-  }
-  
-  .due-date {
+}
+
+.due-date {
     font-size: 12px;
     color: #6c6c6c;
     margin-top: 5px;
-  }
-  
-  .priority-high::before {
+}
+
+.priority-high::before {
     content: "🔥 ";
     color: #ff4c4c;
-  }
-  
-  .priority-medium::before {
+}
+
+.priority-medium::before {
     content: "⚠️ ";
     color: #ffa500;
-  }
-  
-  .priority-low::before {
+}
+
+.priority-low::before {
     content: "🔵 ";
     color: #4ca4ff;
-  }
-  
-  .delete {
+}
+
+.delete {
     cursor: pointer;
     color: #ff4c4c;
     background: none;
     border: none;
-  }
-  
-  #footer {
+}
+
+#footer {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  #clear-completed {
+}
+
+#clear-completed {
     background-color: #ff4c4c;
     padding: 8px 12px;
     border: none;
@@ -156,37 +156,25 @@ body {
     cursor: pointer;
     color: #ffffff;
     transition: background-color 0.3s ease;
-  }
-  
-  #progress-container {
+}
+
+#progress-container {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
-  }
-  
-  #progress-circle {
+}
+
+#progress-circle {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     background-color: #e0e0e0;
     position: relative;
-  }
-  
-  #progress-circle::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #progress-text {
+}
+
+#progress-text {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
@@ -194,5 +182,4 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #4a4a4a;
-  }
-  
+}
